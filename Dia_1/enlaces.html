@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<body>
+    <header>
+        <h1>Enlaces</h1>
+    </header>
+    <main>
+        <p>La etiqueta de anlace es "a"</p>
+        <a href="https://www.google.com">Google</a>
+    </main>
+
+    <section>
+        <h2 id="Absolutas">Rutas absolutas</h2>
+
+        <h3>Local </h3>
+        <p>Van desde la raiz del servidor(/)</p>
+        <p>Siempre empiezan con "/"</p>
+        <a href="/atributos.html">Atributos</a>
+
+        <h3>Externas</h3>
+        <p>Van desde la raiz de otro servidor</p>
+        <p>Siempre empiezan por el protocolo (http:// o https://)</p>
+        <a href="https://google.com">Google</a>
+        <a href="http://wikipedia.org/wiki/HTML">wikipedia</a>
+        <p>Con el atributo(target) "_blank" se abre en una pestaña 
+            nueva
+        </p>
+        <a href="http://wikipedia.org/wiki/HTML" target="_blank">wikipedia</a>
+    </section>
+    <section>
+        <h2 id="Relativas">Rutas relativas</h2>
+        <p>Van desde el punto actual</p>
+        <a href="atributos.html">Atributos</a>
+        <p>La carpeta actual empieza por '.' asi la 
+            ruta apunta a la carpeta actual
+        </p>
+    </section>
+    <section>
+        <h2>Hacia Elementos</h2>
+        <p>Para apuntar a un elemento del documento html se utiliza # con el id del socumendo</p>
+        <a href="#Absolutas">Absolutas</a>
+        <p>pueden apuntar a elementos de otras rutas</p>
+        <a href="https://en.wikipedia.org/wiki/HTML#Elements" target="_blank">Elementos en HTML</a>
+        <p>Para volver arriba solo ponemos #</p>
+        <a href="#">volver arriba</a>
+    </section>
+</body>
+</html>
