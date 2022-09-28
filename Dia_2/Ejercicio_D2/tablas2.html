@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./CSS/index.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+           <li><a href="esquema.html">Esquema</a></li>
+           <li><a href="listas2.html">Listas</a></li>
+           <li><a href="tablas2.html">Tablas</a></li>
+           <li><a href="/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <br/>
+        <br/>
+        <br/>
+        <h1>Tablas</h1>
+    </header>
+    <main>
+        <h2>Tabla basica</h2>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th>Columna</th>
+                <th>Columna</th>
+                <th>Columna</th>
+                
+            </tr>
+            <tr>
+                <th>Fila 1</th>
+                <td>holi</td>
+                <td>holi2</td>
+                <td>holi3</td>
+            </tr>
+            <tr>
+                <th>Fila 2</th>
+                <td></td>
+                <td>holi</td>
+                <td></td>
+            </tr>
+        </table>
+        <section>
+            <h2>Tabla compleja</h2>
+
+            <table border="1">
+                <tr>
+                    <th></th>
+                    <th>Columna</th>
+                    <th>Columna</th>
+                    <th>Columna</th>
+                    
+                </tr>
+                <tr>
+                    <th>Fila 1</th>
+                    <td colspan="2">holi</td>
+                    <td>holi3</td>
+                </tr>
+                <tr>
+                    <th>Fila 2</th>
+                    <td></td>
+                    <td colspan="2" rowspan="2">holi</td>
+                    
+                </tr>
+                <tr>
+                    <th>Fila 3</th>
+                    <td >holi</td>
+                    
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Tabla semantica</h2>
+            <table border="1">
+                <caption>
+                    Titulo de la tabla
+                </caption>
+                <thead>
+                    <th></th>
+                    <th>Columna</th>
+                    <th>Columna</th>
+                    <th>Columna</th>
+                </thead>
+                <tbody>
+                    <th>Fila 1</th>
+                    <td>holi</td>
+                    <td>holi2</td>
+                    <td>holi3</td>
+                    
+                </tbody>
+                <tfoot>
+                    <th>total</th>
+                <td>holi</td>
+                <td>holi2</td>
+                <td>holi3</td>
+                </tfoot>
+               
+            </table>
+        </section>
+        <br/>
+        <br/>
+        <section>
+            <h2>Ejercicio</h2>
+            <p>Crear el horario de un instituto con una tabla compleja </p>
+           <a href="../ejercicio_horarios.html">Ejercico Horários</a>
+        </section>
+    
+    
+    </main>
+
+</body>
+</html>
