@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+    <main>
+        <p>imput viene por defecto con el atributo text</p>
+        <form action="">
+        <label for="nombre">Nombre</label>
+            <input type="text" name="name" id="nombre" placeholder="holi" value="Holi" required autocomplete="off">
+            <label for="contraseña">
+                Contraseña
+            </label>
+            <input type="password" id="contraseña">
+        <button>Enviar</button>
+        </form>
+        <p>Atributos</p>
+        <p>placeholder: para indicar que se quiere poner en el campo cuando empiezas a escribir se borra</p>
+        <p>value: me da un valor por defecto</p>
+        <p>Autofocus: automaticamente puedes escribir </p>
+        <p>required: obliga a rellenar el formulario (El Value cuenta)</p>
+        <p>minlength/maxlength: marca el minimo y maximo del input</p>
+        <p>autocomplete: sirve para que no se vea los inputs anteriores con off</p>
+        <h4>Lo mejor para los formularios es tratarlos como listas cada label con su input</h4>
+        <ul>
+            <li>
+                <label for="nombre">Nombre</label>
+            <input type="text" name="name" id="nombre" placeholder="holi" value="Holi" required autocomplete="off">
+            </li>
+            <li>
+                <label for="contraseña">
+                    Contraseña
+                </label>
+                <input type="password" id="contraseña">
+            </li>
+            <li>
+                <label for="text">Textarea</label>
+                <textarea name="text" id="text" cols="30" rows="10"></textarea>
+            </li>
+            <li>
+                <label for="select"></label>
+                <select name="select" id="select">
+                    <option value="1">Miau</option>
+                    <option value="2">Guau</option>
+                </select>
+            </li>
+            <li>
+                <button>enviar</button>
+                <fieldset>
+                    <legend>Género</legend>
+                    <ul>
+                        <li>
+                            <input name="gender" value="man" type="radio" id="man">
+                            <label for="man"  >Hombre</label>
+                        </li>
+                        <li>
+                            <input name="gender" value="woman" type="radio" id="woman">
+                            <label for="woman">Mujer</label>
+                        </li>
+                        <li>
+                            <input name="gender" value="other" type="radio" id="other">
+                            <label for="other">Otro</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </li>
+
+            <li>
+                
+            </li>
+
+
+
+
+        </ul>
+
+
+        <section>
+            <h2>Botones</h2>
+            <p>Dentro de un folmulario envia la informacion(type=submit)</p>
+            <button type="submit">Enviar</button>
+            <p>El boton con type=buttom no sirve para nada sin JS</p>
+            <button type="buttom">click!</button>
+        </section>
+    </main>
+</body>
+</html>
