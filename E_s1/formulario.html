@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formularios</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header><h1>Formularios</h1></header>
+        <main>
+        <form>
+             <fieldset>
+                <legend>Datos personales</legend>
+                
+                    
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" autofocus required>
+                    
+                    
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" required>
+                    
+                    <br>
+
+                    <label for="url">Url</label>
+                    <input type="url"  id="url" placeholder="Escribe la URL de tu página web personal">
+                
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Fechas, horarios...</legend>
+                
+                
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha">
+                
+            
+                    <label for="tiempo">Tiempo</label>
+                    <input type="time" id="tiempo">
+                
+            
+                    <label for="fecha_hora">Fecha y hora</label>
+                    <input type="datetime-local"  id="fecha_hora">
+                
+            
+                    <label for="mes">Mes</label>
+                    <input type="month" id="mes">
+                
+            
+                    <label for="semana">semana</label>
+                    <input type="week" id="semana">
+                
+            </fieldset>
+            <fieldset>
+                <legend>Numero</legend>
+            
+                    <label for="number">Número </label>
+                    <input type="number" id="number" max="10" min="-10">
+                
+            
+                    <label for="tel">Teléfono</label>
+                    <input type="tel" id="tel" value="+34" readonly >
+                
+            
+                    <label for="search">Búsqueda</label>
+                    <input type="search" id="search" disabled >
+                
+            </fieldset>
+            <fieldset>
+                <legend>Color</legend>
+            
+                    <label for="color">Color favorito</label>
+                    <input type="color">
+                
+            </fieldset>
+                <input type="submit" id="enviar" value="Enviar!">
+                <button type="reset">Limpiar</button>
+           
+            
+        </form>
+
+
+        </main>
+    </body>
+</html>
