@@ -1,0 +1,147 @@
+/* SELECTORES BÁSICOS */
+
+/* Por tipo */
+h1{
+    color: brown;
+}
+
+p{
+   color: red; 
+}
+
+/* Por clase */
+
+.importante{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.warning{
+    color: black;
+    background: red;
+}
+
+/* Por ID */
+#unico{
+    font-size: 1.5rem;
+}
+
+/* SELECTORES AVANZADOS */
+
+/* Por atrivuto */
+[data-author]{
+    font-style: italic;
+
+}
+
+[data-author="Nacho"]{ /*valor exacto*/
+    font-family: sans-serif;
+}
+
+[class]{
+    border: 1px solid black;
+}
+
+[href^="http"] {/*Empieza con el valor*/
+font-family: sans-serif;
+
+}
+[href$=".com"] /*Termina con el valor*/
+{
+    color: aqua;
+}
+
+[href*="wiki"]{ /*contiene el valor*/
+    font-weight: bold;
+
+}
+
+/* PSEUDO CLASES */
+
+:checked{
+    width: 5rem;
+    height: 5rem;
+}
+
+p:first-child{
+    border: 5px solid blue;
+}
+
+li:last-child{
+    border: 2px solid cyan;
+}
+
+p:nth-child(3){
+    text-decoration: underline;
+}
+
+li:nth-child(even){
+    background: rgba(94, 6, 6, 0.589);
+}
+
+p:first-of-type{
+    font-size: 2rem;
+
+}
+
+p:not(.importante){
+    text-decoration: line-through;
+}
+
+/* enlace sin visitar */
+#especial:link{
+    color: green;
+}
+/* enlace visitado  */
+
+#especial:visited{
+    color: rebeccapurple;
+}
+
+#especial:hover{
+    color: black;
+}
+
+#especial:focus{
+    border: 5rem black;
+}
+
+#especial:active{
+    color: magenta;
+}
+
+/* PSEUDO ELEMENTOS  */
+
+div::first-letter{
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+div::first-line{
+    font-style: italic;
+}
+
+div::selection{
+    background: blueviolet;
+    color: white;
+}
+
+/* PSEUDO ELEMNTOS ESPECIALES */
+
+div::after{
+    content: "Ver más...";
+    color: blue;
+}
+
+a::before{
+    content: "➡";
+}
+
+
+
+
+
+
+
+
+
+
+
