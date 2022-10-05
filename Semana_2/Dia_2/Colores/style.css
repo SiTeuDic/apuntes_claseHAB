@@ -1,0 +1,47 @@
+div{
+    border: 1px solid black;
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+}
+
+#nombre{
+    background-color: blueviolet;
+}
+
+#rgb{
+    /* indicamos cuando de rojo, verde y azul de 0 a 255 */
+    background-color: rgb(255, 100, 255);
+}
+
+#rgba{
+    /* (rojo, varde, azul, alfa) */
+    background-color: rgba(255, 100, 255, 0.5);
+}
+
+#hex{
+    /* #RRVVAA (de 00 a FF) */
+    background-color: #AA00AA;
+}
+
+#hexa{
+    /* #RRVVAATT */
+    background-color: #AA00AA99;
+}
+
+
+#hsl{
+    /* hue(tono), saturacion luminosidad */
+    background-color: hsl(240, 100%, 50%);
+}
+
+#trans{
+    background-color: white;
+    color: transparent;
+}
+
+#current{
+    color: rebeccapurple;
+    background-color: white;
+    border: 2px solid currentColor;
+}

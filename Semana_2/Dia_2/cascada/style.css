@@ -1,0 +1,48 @@
+.titulo{
+    color: blue!important;
+}
+
+.principal{
+    color: red;
+}
+
+/* Lo primero que aplica es la regla !important, especificidad(no se como se escribe) */
+/* Elementos, pseudoelementos = 0,0,1 */
+p{
+    color: blueviolet;
+
+} 
+
+section p{
+    color: aqua;
+}
+
+/* Clases, pseudoclases = 0,1,0 */
+
+.importante{
+    color: black;
+    font-weight: bold;
+}
+
+.importante:nth-child(4){
+    color: red;
+}
+
+p.importante:nth-child(4){
+    color: lime;
+}
+/* id = 1,0,0 */
+#unico{
+    color: grey;
+}
+
+/* Orden, en caso de empate gana el de mas abajo  */
+
+
+/* Las propiedades abreviadas van antes para no crear conflico, cuanto más especificas más abajo */
+main{
+    border: 1px solid rebeccapurple ;
+    border-radius: 1rem;
+    border-top-left-radius: 20rem;
+}
+

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body > header{
+    background-color: black;
+}
+
+#peli1 > h2, #peli1 h3{
+    color: rgb(223, 14, 14);
+}
+
+#peli2 > h2, #peli2 h3{
+    color: green;
+}
+
+h2{
+    font-family: sans-serif;
+}
+
+aside h2 {
+    text-decoration: underline;
+}
+
+p{
+    margin: 1rem;
+}
+
+p:last-of-type{
+    margin-bottom: 2rem;
+}
+
+.sinopsis{
+    font-family: sans-serif;
+}

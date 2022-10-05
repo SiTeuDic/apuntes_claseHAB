@@ -1,0 +1,36 @@
+header{
+    color: blue;
+}
+
+main{
+    border: 1px solid black;
+    color: blue;
+}
+
+#section{
+    color: red;
+}
+
+p{
+    color: aqua;
+}
+/* La herencia con pesa en la cascada */
+
+
+
+/* podemos hacer que no se herede lo que deveria, y que se herede lo que no debeía */
+#reves{
+    color: initial; 
+    border: inherit;
+}
+/* Como los encales tienes estilos propios en el navegador, hay que darles estilos directamente para cambiarlos */
+a{
+    color: red;
+}
+
+a:visited{
+    color: black;
+}
+a:hover{
+    color: blue;
+}
