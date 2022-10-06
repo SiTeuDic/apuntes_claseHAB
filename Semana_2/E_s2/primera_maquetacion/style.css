@@ -1,0 +1,96 @@
+/* Se valorará, por orden de importancia:
+
+Los selectores utilizados
+
+-Ten siempre en cuenta qué estas seleccionando (no es lo mismo algo importante que un primer hijo, aunque coincidan). Sólo si lo haces correctamente, el proyecto será escalable (se pueden añadir cosas o modificar el HTML y sigue viendose correctamente sin tener que cambiar el CSS).
+-Las propiedades
+-Toda la página tiene una tipografía sin serifa.
+-La cabecera tiene color de fondo, y texto blanco y centrado.
+
+Lista:
+
+-Las viñetas de la lista no son las que vienen por defecto.
+-Los objetos importantes de la lista están subrayados y en negrita.
+
+Tabla:
+
+-La cabecera tiene un color de fondo y de texto diferente al resto.
+-Las filas pares tienen un color de fondo distinto a las impares.
+-Los títulos de fila tienen un color de fondo con transparencia.
+-El texto de la fila de descanso está en mayúsculas, negrita y centrado.
+
+No se valorará:
+Los valores de colores y medidas (no tienen por que ser exactos) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: rgb(108, 184, 241);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+ section > h2{
+    color: rgb(108, 184, 241) ;
+    margin-top: 2rem ;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/* List*/
+ul{
+    margin-left: 3rem;
+    list-style-type: circle;
+    line-height: 2.2rem;
+
+}
+
+.importante{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+/* Table */
+table{
+    margin-left: 2.5rem;
+    text-align: center;
+    
+    /* width: 27rem;
+    height: 15rem; */
+
+}
+td, th{
+    width: 7rem;
+    height: 2.5rem;
+    background-color: rgba(108, 183, 241, 0.359);
+  
+}
+thead{
+    background-color: rgba(85, 164, 225, 0.985);
+    color: white;
+}
+
+tbody th{
+    background-color: rgb(139, 196, 239);
+}
+
+tbody th:nth-child() {
+    background-color: rgb(8, 26, 39);
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(190, 192, 240);
+}
+
+
+

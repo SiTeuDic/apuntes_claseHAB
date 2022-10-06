@@ -1,0 +1,95 @@
+ /* 
+ lista:
+ Haz que el último li tenga fondo azul. Especifica ese fondo azul usando valores RGB
+
+Haz que los li impares tengan el texto subrayado. Haz que el subrayado sea de color verde.
+
+Haz que todos los elementos de la lista aparezcan en una sola línea en lugar de unos debajo de otros y que tengan una separación de 10 píxeles entre unos y otros.
+
+Haz que al final de cada li aparezca un emoji diferente sin modificar el html.
+
+Haz que el li que tiene texto en inglés tenga el tipo de letra del doble de tamaño que los otros y en mayúsculas. 
+
+Provincias:
+En lugar de tener puntos a la izquierda de los elementos tenga números romanos.
+
+Excepto "A Coruña" que no debe tener número romano a la izquierda.
+
+*/
+
+
+
+/* Lista */
+.lista li:nth-last-child(1){
+    background-color: rgb(26, 26, 252);
+    
+}
+
+.lista li:nth-of-type(odd){
+    text-decoration: underline lime;
+
+}
+
+.lista{
+    list-style-type: none;
+      
+}
+
+.lista li{
+    margin: 10px;
+    display: inline;
+    
+}
+.lista li::after{
+    content: "";
+}
+/*De esta manera funciona pero ne he encontrado todavía, una manera más secilla*/
+
+.lista li:nth-of-type(1)::after{
+    content: "🐙";
+}
+
+.lista li:nth-of-type(2)::after{
+    content: "👽 ";
+}
+
+.lista li:nth-of-type(3)::after{
+    content: "🦄";
+}
+
+.lista li:nth-of-type(4)::after{
+    content: "🦠";
+}
+
+.lista li:nth-of-type(5)::after{
+    content: "🫂";
+}
+
+.lista li:nth-of-type(6)::after{
+    content: "🌝";
+}
+
+li[lang]{
+    font-size: 200%;
+    text-transform: uppercase;
+
+}
+
+
+/* Provincias */
+
+#provincias li{
+    list-style-type: upper-roman;   
+}
+
+#provincias li:nth-child(2){
+    list-style-type: circle;
+}
+
+
+
+
+
+
+
+
