@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
+
+/* Tipográfias */
+header{
+    /* color */
+    color: blueviolet;
+    font-family: Roboto, courier;
+    /* Tansformacion (Mayusculas o minusculas)*/
+    text-transform: uppercase;
+    
+    /* decoracion */
+    text-decoration: underline overline double;
+    text-decoration-color: aqua;
+    
+    /* sombra( desplazamiento horizontal, vertical, difusion y color) */
+    text-shadow: 0.3rem 0.3rem 5px rgba(0, 0, 0, 0.24);
+    /* alineado: left, center, right,justify*/
+    text-align: center;
+}
+
+/* Hay 5 grupos de estilos de texto */
+/* serif,sant-serif, monospace(todas las letras oculan los mismo), cursive, fantasy */
+/* importar desde una api externa */
+header{
+    font-family: 'Silkscreen', cursive;
+    /* Tamaños */
+    font-size: 1.5rem;
+}
+/* estilos y peso(grosor) */
+p{
+   /* tipografia */
+    font-family: 'Courier New', Courier, monospace;
+    /* cursiva o no  */
+    font-style: italic;
+    /* Grosor,(negrita) */
+    font-weight: bold;
+    /* Decoración */
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    /* alto de linea (interliniado) por defecto 1.2*/
+    line-height: 1.2;
+    /* Tamaño entre palabras */
+    word-spacing: 1rem;
+
+    /* espacio entre letras */
+    letter-spacing: 0.5px;
+
+}
+
+.tachado{
+    text-decoration: line-through wavy red;
+}
+
+
+

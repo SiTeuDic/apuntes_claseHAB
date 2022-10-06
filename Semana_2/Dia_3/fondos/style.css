@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+div{
+    border: 1px solid;
+    height: 15rem;
+    width: 15rem;
+    margin: 2rem;
+}
+
+div:nth-child(1){
+    background-color: lime;
+}
+div:nth-child(2){
+    background-image: url(https://images.unsplash.com/photo-1664992892797-781fcf7b7541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    /* cuando usamos una imagen de fondo deveriamos poner una color parecido de backhup */
+    background-color: blue;
+}
+div:nth-child(3){
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png);
+    background-color: red;
+}
+div:nth-child(4){
+    background-image: url(https://images.unsplash.com/photo-1664992892797-781fcf7b7541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    /* cuando usamos una imagen de fondo deveriamos poner una color parecido de backhup */
+    background-color: blue;
+    background-size: cover;
+    background-position: center;
+}
+
+div:nth-child(5){
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png);
+    background-color: red;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div:nth-child(6){
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png);
+    background-color: red;
+    /* Promero horizontal, veertical con auto se adapta */
+    background-size:  6rem auto ;
+    background-position: bottom right;
+    background-repeat: repeat-x;
+   
+}
+
+div:nth-child(7){
+    background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png);
+    background-color: red;
+    /* Promero horizontal, veertical con auto se adapta */
+    background-size:  7rem auto ;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+

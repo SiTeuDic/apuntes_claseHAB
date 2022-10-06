@@ -1,0 +1,25 @@
+section{
+    width: 40vw;
+    height: 15rem;
+    margin: 2rem;
+    border: 1px solid black;
+}
+
+p{
+    min-width: 20rem;
+}
+
+section#hidden{
+    overflow: hidden;
+}
+section#scroll{
+    overflow: scroll;
+}
+
+section#auto{
+    overflow: auto;
+}
+section#visible{
+    overflow: visible;
+  
+}

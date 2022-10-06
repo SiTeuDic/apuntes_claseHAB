@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+main{
+    text-align: center;
+}
+h1{
+    
+}
+
+section{
+    border: 5px outset blueviolet;
+    /* border-top: 2px dotted blue; */
+    /* border-top, border-bottom, border-right, border-left */
+    /* border-bottom: 5px inset red; */
+    /* transformar el tamaño de la caja */
+    width: 20rem;
+    height: 10rem;
+/* truco para centrar en horizontal: margin auto */
+    margin: 1rem auto;
+}
+
+article{
+    text-align: center;
+    /* 1 = 4 lados
+     */
+    margin: 1rem;
+    /* 2= vertical horizontal */
+    margin: 1rem 3rem;
+    /* 3= arriba lados abajo */
+    margin: 1rem 2rem 0.5rem ;
+    /* 4=arriba derecha abajo izquierda */
+    margin: 1rem 3rem 0.5rem 2rem;
+}
+
+button{
+    border: 3px outset gray;
+}
+button:active{
+    border: 3px inset ;
+}
+

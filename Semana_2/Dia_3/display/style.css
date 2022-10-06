@@ -1,0 +1,43 @@
+/* Bloque */
+/* control total sobre dimensiones, margin y paddin. El borde siempre es recangulas, provoca saltos de linea no puede tenes elementos el lado */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    border: 1px solid black;
+}
+p{
+    border: 1px solid black;
+    width: 20rem;
+    height: 10rem;
+    margin: 2rem;
+    padding: 2rem;
+    
+
+
+}
+/* en linea */
+/* No tenemos control sobre las dimensiones */
+span{
+    color: red;
+
+    border: 1px solid;
+
+    width: 20rem;/*nofunciona*/
+    height: 20rem;/*nofunciona*/
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#block *{
+    display: block;
+}
+#inline *{
+    display: inline;
+}
+
+#inline-block *{
+    display: inline-block;
+}
