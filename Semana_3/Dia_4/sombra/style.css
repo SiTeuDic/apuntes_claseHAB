@@ -1,0 +1,42 @@
+div{
+    /* grosor, tipo, color(opcional) */
+    border: 1px solid black;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+}
+
+div:nth-child(2){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.363);
+}
+
+
+div:nth-child(3){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.514);
+}
+
+div:nth-child(4){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.767);
+}
+
+div:nth-child(5){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.514);
+}
+
+div:nth-child(6){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: inset 3px 3px 5px black   ;
+}
+
+div:nth-child(7){
+    /* desplazamiento horizontal, desplazamiento horizontal,digusion y color */
+    box-shadow: 3px 3px 5px rgba(17, 212, 92, 0.692), -3px -3px 5px rgba(212, 121, 17, 0.692), inset 3px 3px 5px rgba(0, 0, 0, 0.692)     ;
+}
+
+img{
+    filter: drop-shadow(3px 3px 5px black);
+}

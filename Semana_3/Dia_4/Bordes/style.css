@@ -1,0 +1,50 @@
+div{
+    /* grosor, tipo, color(opcional) */
+    border: 1px solid black;
+    height: 10rem;
+    width: 10rem;
+    margin: 1rem;
+}
+
+
+div:nth-of-type(2){
+    border-width: 3px;
+    border-style: dashed;
+
+    /* redondeo */
+    border-radius: 3px;
+
+}
+
+div:nth-of-type(3){
+    border-width: 15px;
+    border-style: groove;
+    border-color: aqua ;
+    
+    border-radius: 50%;
+    
+}
+
+div:nth-of-type(4){
+    border-width: 3px 5px 5px;
+    border-style: dotted dashed groove;
+    border-color: aqua rebeccapurple;
+    
+    
+}
+div:nth-of-type(4){
+    border-width: 3px 5px 5px 6px;
+    border-style: dotted dashed groove;
+    border-color: aqua rebeccapurple blue lime;
+    
+
+    
+}
+
+div:nth-of-type(5){
+    border: 1px solid green;
+    border-left: 5px double blue;
+    
+}
+
+
