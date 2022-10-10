@@ -7,9 +7,9 @@
 }
 
 header{
-    background-color: black;
     padding: 3.5rem;
-
+    margin-bottom: 20px;
+    background-color: black;
     color: white;
 }
 
@@ -29,30 +29,74 @@ header h2{
 section{
     margin: auto;
     width: 40rem;
+    position: relative;
 }
 
 section > h3{
     font-size: 2rem;
     color: grey;
-    border-bottom: 3px solid gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 30px;
 }
 
 section p:nth-of-type(1){
-    width: 25rem;
     
-    
+    width: 19rem;
+    display: inline-block;
+    margin-right: 10px;
+    /* align-items: flex-start; */
 }
 
 img{
-    height: 20rem;
+    height: 18.7rem;
+    width: 20rem;
+    /* position: absolute; */
+    
+    display: inline-block;
+    align-items: flex-end;
 }
 
-
-
-
+section p:nth-of-type(2){
+    margin-top: 20px;
+    margin-bottom: 25px;
+    
+}
 /* Form */
 
 
+form > ul{
+    list-style: none;
+    font-weight: bold;
+}
 
+input{
+    height: 2rem;
+}
 
+input, textarea{
+    
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 40rem;
+    
+    
+    background-color: rgb(128, 129, 145);
+    border: rgb(89, 90, 99);
 
+    resize: none;
+}
+
+button{
+    width: 6rem;
+    height: 2rem;
+    margin-bottom: 10px;
+    background-color: black;
+    border: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+button:hover{
+    border: 1px solid white;
+}
