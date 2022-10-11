@@ -28,7 +28,7 @@ header h2{
 
 section{
     margin: auto;
-    width: 40rem;
+    max-width: 40rem;
     position: relative;
 }
 
@@ -54,6 +54,7 @@ img{
     
     display: inline-block;
     align-items: flex-end;
+    object-fit: cover;
 }
 
 section p:nth-of-type(2){
@@ -77,7 +78,7 @@ input, textarea{
     
     margin-top: 5px;
     margin-bottom: 20px;
-    width: 40rem;
+    width: 100%;
     
     box-shadow: 3px 3px 5px  rgba(0, 0, 0, 0.427);
     background-color: rgb(128, 129, 145);
@@ -86,7 +87,7 @@ input, textarea{
     resize: none;
 }
 
-button{
+form button{
     width: 6rem;
     height: 2rem;
     margin-bottom: 50px;
@@ -97,7 +98,7 @@ button{
     font-weight: bold;
 }
 
-button:hover{
+form button:hover{
     box-shadow: none;   
 }
 
