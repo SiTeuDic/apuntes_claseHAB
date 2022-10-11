@@ -78,14 +78,19 @@ li[lang]{
 
 /* Provincias */
 
-#provincias li{
+/* #provincias li{
     list-style-type: upper-roman;   
-}
+} */
 
-#provincias li:nth-child(2){
+/* #provincias li:nth-child(2){
     list-style-type: circle;
-}
+} */
+/* esta bien pero si se añade otra provincia no seria el tercero */
 
+#provincias li:not(#coru){
+    list-style: upper-roman;
+}
+/* asi al añadir elementos nuevos seimpre quedará coruña sin el upper-roman */
 
 
 
