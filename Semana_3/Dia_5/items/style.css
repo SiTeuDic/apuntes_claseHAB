@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+div{
+    background-color: aquamarine;
+    border: 1px solid black;
+
+    height: 10rem;
+    width: 10rem;
+}
+
+body{
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* PROPIEDADES DE lOS  HIJOS */
+ /* stretch (solo si no tiene medida)| flex-start | flex-end | center | baseline */
+ div:nth-child(3){
+    /* Saltarse la alineacion en eje secundario */
+    align-self: flex-start;
+}
+
+div:nth-child(1){
+    /* que no se en coja */
+    flex-shrink: 0; /*por defecto 1*/
+}
+
+div:nth-child(2){
+    /* que se encoja más */
+    flex-shrink: 10;/*cuanto más grande el numero antes y mas rapido se encoge*/
+}
+
+div:nth-child(4){
+    /* que crezca */
+    flex-grow: 1;
+    /* por defecto 0 */
+}
+div:nth-child(5){
+    flex-grow: 2;
+}
+
+/* Orden  */
+/* por defecto es 0 */
+div:nth-child(4){
+    order: 1
+    /* 1  al inicio/ -1 al fin */
+
+}

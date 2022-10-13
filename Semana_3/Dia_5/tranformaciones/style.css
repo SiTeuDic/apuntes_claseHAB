@@ -1,0 +1,43 @@
+p{
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: aqua;
+    height: 7rem;
+    width: 7rem;
+}
+
+#tranlate{
+    /* positivo hacia la derecha y abajo  | negativo hacia la izquierda y arriba */
+    transform: translate(2rem, -2rem);
+}
+
+#rotate{
+    /* positivo horario */
+    transform: rotate(30deg);
+}
+
+#scale{
+    /* ,si le damos una undad escala en las dos direcciones si le damos 2 horizontal y vertical */
+    transform: scale(-1, 1.5);
+}
+
+#skew{
+    transform: skew(20deg);
+}
+section{
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+section p{
+    transform: rotate(45deg);
+}
+
+#centrer{
+    transform-origin: center;
+    /* por defecto */
+}
+#botomleft{
+    transform-origin: bottom left;
+}

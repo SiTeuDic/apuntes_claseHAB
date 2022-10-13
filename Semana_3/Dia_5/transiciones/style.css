@@ -1,0 +1,39 @@
+h1{
+    color: blue;
+    transition: color 3s;
+}
+
+h1:hover{
+    color: blueviolet;
+    
+}
+p{
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: aqua;
+    height: 7rem;
+    width: 7rem;
+    transition: transform 3s;
+    box-shadow: 0 0 10px;
+}
+
+p:hover{
+    transform: rotate(30deg);
+}
+
+div{
+    border: 1px solid red;
+    background-color: black;
+    height: 5rem;
+    width: 5rem;
+    /* transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 2s; */
+    transition: transform 1s ease 2s;
+}
+
+div.move{
+    /* hay que ponerle la clase move al div */
+    transform: translate(30rem);
+}

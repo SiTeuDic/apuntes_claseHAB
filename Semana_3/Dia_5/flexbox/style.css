@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+div{
+    background-color: aquamarine;
+    border: 1px solid black;
+
+    height: 10rem;
+    width: 10rem;
+}
+
+
+
+/* //////// */
+
+body{/*Contenedor*/
+    height: 100vh;
+    display: flex;
+
+    /* Diereccion */
+    /* row | colum | row-reverse | colum-reverse */
+    /* Eje principal */
+    flex-direction: row;
+
+    /* Se crean silas/columnas cuando no caben  */
+    /* nowrap | wrap | wrap.reserse */
+    /* Eje secundario */
+    flex-wrap: wrap;
+    /* Espacio sobreante en eje principal */
+    /* flex-start | flex-end | center | space-between | space-around | space-evenly*/
+    justify-content: space-evenly;
+
+    /* Colocar elementos en fila/columna (eje secundario) */
+    /* stretch (solo si no tiene medida)| flex-start | flex-end | center | baseline */
+    align-items: center;
+    /* Colocar el espacion sobrante en el eje secundario */
+    /* stretch |flex-start | flex-end | center | space-between | space-around | space-evenly*/
+    align-content:  space-evenly;
+
+
+        /* separacion minima entre elementos */
+        gap: 1rem;
+}
+
+div:nth-child(6){
+    font-size: 200%;
+    height: 5rem;
+}
+
+/* PROPIEDADES DE lOS  HIJOS */
+ /* stretch (solo si no tiene medida)| flex-start | flex-end | center | baseline */
+div:nth-child(7){
+    align-self: flex-start;
+}
+

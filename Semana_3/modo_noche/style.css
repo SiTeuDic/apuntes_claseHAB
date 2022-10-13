@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --colorPrincipal: rgb(207, 76, 76);
+    --colorSecundario: white;
+    --colordetalle: gray;
+    --colordetalle2: darkgrey;
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+}
+
+html.dark{
+    --colorPrincipal: rgb(0, 0, 0);
+    --colorSecundario: white;
+    --colordetalle: rgb(156, 0, 0);
+    --colordetalle2: rgb(92, 0, 0);
+    
+    background-color: var(--colorSecundario);
+    color: var(--colorPrincipal);
+}
+
+main{
+    height: 400vh;
+}
+h1{
+    padding: 3rem;
+
+}
+
+header{
+    /* si tiene position statil(por defecto)
+    no le afecta al z-index */
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-align: center;
+    position: relative;
+    
+}
+nav{
+    background-color: var(--colorSecundario);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav li{
+    display: inline-block;
+    list-style: none;
+}
+
+nav a{
+    padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--colordetalle);
+    border-right: 1px solid;
+}
+
+#volver{
+    position: fixed;
+    right: 0;
+    top: 4rem;
+    padding: 0.5rem 1rem;
+    z-index: -1;
+    background-color: black;
+    color: aliceblue;
+
+
+}
