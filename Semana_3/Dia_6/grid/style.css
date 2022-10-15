@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div, span{
+    border: 1px solid black;
+    /* height: 7rem;
+    width: 7rem; */
+    background-color: aquamarine;
+    
+}
+span{
+    /* padding: 1rem; */
+}
+
+body{
+    height: 100vh;
+    display: grid;
+/* gird explicita */
+    grid-template-columns: 10rem 200px 25% auto;
+    grid-template-rows: 50px 3rem  auto 1fr 3fr;
+
+
+    
+}

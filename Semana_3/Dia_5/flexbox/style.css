@@ -26,7 +26,7 @@ body{/*Contenedor*/
     /* Eje principal */
     flex-direction: row;
 
-    /* Se crean silas/columnas cuando no caben  */
+    /* Se crean filas/columnas cuando no caben  */
     /* nowrap | wrap | wrap.reserse */
     /* Eje secundario */
     flex-wrap: wrap;

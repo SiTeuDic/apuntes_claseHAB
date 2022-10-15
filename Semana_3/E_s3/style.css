@@ -1,0 +1,24 @@
+@import url(/base.css);
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    height: 10rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 2rem;
+    align-items: center;
+    /* background-color: red; */
+}
+menu{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
