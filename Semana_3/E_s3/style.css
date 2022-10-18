@@ -1,24 +1,98 @@
 @import url(/base.css);
+/* Ejercico incompleto, por falta de tiempo, sigo trabajando para poder subir */
+body {
+  display: grid;
+  grid-template-rows: 10rem 2rem auto 2rem;
+  grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "footer";
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-header{
+  grid-area: header;
+}
+
+header > nav {
+  flex-direction: row;
+  gap: 1rem;
+  /* background-color: aqua; */
+}
+
+menu {
+  display: flex;
+  align-content: stretch;
+  gap: 1rem;
+
+  grid-area: menu;
+}
+
+main {
+  display: grid;
+
+  grid-auto-rows: minmax();
+  grid-template-columns: repeat(auto-fit, 10rem);
+  justify-content: space-evenly;
+  grid-row-gap: 1rem;
+  grid-column-gap: 2rem;
+
+  grid-area: main;
+
+  /* background-color: red; */
+}
+
+article {
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  height: min-content;
+}
+
+/* //////////////////////////////////////////////// */
+
+@media (min-width: 600px) {
+  body {
+    display: grid;
+    grid-template-rows: 5rem 10rem auto 2rem;
+    grid-template-columns: 10rem auto;
+    grid-template-areas:
+      "header header"
+      "menu main"
+      "menu main"
+      "footer footer";
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: header;
+  }
+
+  header > nav {
+    flex-direction: row;
+  }
+
+  nav > li {
+    background-color: ;
+    gap: 1rem;
+    display: flex;
+    align-content: stretch;
+    gap: 1rem;
+    flex-direction: column;
+
+    grid-area: menu;
+  }
+
+  /* nav[aria-label="categorias"] {
     display: flex;
     flex-direction: column;
-    justify-content:space-around;
-    align-items: center;
-    height: 10rem;
+  } */
 }
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 2rem;
-    align-items: center;
-    /* background-color: red; */
-}
-menu{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
