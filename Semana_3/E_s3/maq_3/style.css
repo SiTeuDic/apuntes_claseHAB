@@ -1,5 +1,6 @@
 @import url(/base.css);
-/* Ejercico incompleto, por falta de tiempo, sigo trabajando para poder subir */
+/* hola! está un poco caótico por falta de tiempo, me gustaría pulir el orden en general y la limpieza del codigo, ha partes como el footer dentro del media queri que se que no es de la forma en la que se pide pero funciona y se consigen las mediadas.
+Un salido =)*/
 body {
   display: grid;
   grid-template-rows: 10rem 2rem auto 2rem;
@@ -9,19 +10,22 @@ body {
     "main"
     "footer";
 }
+/* HEADER */
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   grid-area: header;
+}
+header form {
+  display: flex;
 }
 
 header > nav {
   flex-direction: row;
   gap: 1rem;
-  /* background-color: aqua; */
 }
 
 menu {
@@ -42,11 +46,6 @@ main {
   grid-column-gap: 2rem;
 
   grid-area: main;
-
-  /* background-color: red; */
-}
-
-article {
 }
 
 footer {
@@ -81,7 +80,6 @@ footer {
   }
 
   nav > li {
-    background-color: ;
     gap: 1rem;
     display: flex;
     align-content: stretch;
@@ -91,8 +89,19 @@ footer {
     grid-area: menu;
   }
 
-  /* nav[aria-label="categorias"] {
+  nav[aria-label="categorias"] > menu {
     display: flex;
     flex-direction: column;
-  } */
+  }
+  main {
+    column-gap: 1rem;
+  }
+  footer {
+    grid-area: footer;
+    align-items: end;
+    justify-content: end;
+  }
+  footer > a {
+    margin: 2rem;
+  }
 }

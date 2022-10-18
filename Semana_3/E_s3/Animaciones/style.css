@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  fill: gray;
+}
+
+/* Crea a partir de aquí tu CSS */
+
+.like {
+  fill: red;
+  transform: scale(110%);
+  transition: fill 1s;
+  animation-name: like;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes like {
+  0% {
+    fill: grey;
+    scale: 110%;
+  }
+  25% {
+    scale: 90%;
+  }
+  50% {
+    fill: red;
+    scale: 110%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
