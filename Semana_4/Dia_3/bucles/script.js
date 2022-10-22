@@ -45,11 +45,14 @@ let lista = ["patatas", "huevos", "azucar", "pan"];
 for (let i = 0; i < elementos; i++) {
   console.log("Creando li: ", lista[i]);
 }
-
-// Ejercicio: Crear las tablas de multiplicar con el buble for .=)
 console.log("");
+console.log("/////EJERCICIOS/////");
+
+console.log("");
+
 /* mostrar una cuenta atras de 20 a 10 */
-console.log("Ejercicio 2");
+console.log("Ejercicio 1");
+
 for (let i = 20; i > 10; i--) {
   console.log(i);
 }
@@ -57,7 +60,21 @@ for (let i = 20; i > 10; i--) {
 console.log("");
 
 // mostrar por consola una cuenta de 10 en 10 hasta 100
+console.log("Ejercicio 2");
 
-for (let i = 0; i <= 100; i += 10) {
+for (let i = 10; i <= 100; i += 10) {
   console.log(i);
+}
+console.log("");
+
+// Ejercicio: Crear las tablas de multiplicar con el buble for .(ANIDAR)
+console.log("Ejercicio 3");
+
+console.log("TABLAS DE MULTIPLICAR");
+
+for (let i = 1; i <= 10; i++) {
+  console.log("Tabla del ", i);
+  for (let j = 0; j <= 10; j++) {
+    console.log(i * j);
+  }
 }
