@@ -29,10 +29,10 @@ if (edad <= edadDescInfantil) {
 
 /////////////SWICHT//////////////////
 
-switch (edad) {
-  case value:
+/* switch (edad) {
+  case edad :
     break;
 
   default:
     break;
-}
+} */
