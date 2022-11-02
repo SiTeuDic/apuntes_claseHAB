@@ -8,15 +8,16 @@ let arr3 = ["rojo", "amarillo", "verde"]; //False
 let arr4 = ["rojo", "azul", "verde", "amarillo"];
 
 function compararArr(arrA, arrB) {
-  // if (arrA.length === arrB.length) {
+  if (arrA.length !== arrB.length) {
+    return false;
+  }
   for (let i = 0; i < arrA.length || i < arrB.length; i++) {
     console.log(i);
-    if (arrA[i] !== arrB[i]){ 
+    if (arrA[i] !== arrB[i]) {
       return false;
     }
   }
   return true;
 }
 
-
-console.log(compararArr(arr1, arr2))
+console.log(compararArr(arr1, arr4));
