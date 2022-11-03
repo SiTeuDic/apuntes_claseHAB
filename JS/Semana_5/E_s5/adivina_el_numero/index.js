@@ -1,7 +1,6 @@
 "use strict";
-//  no quedo contento con la cantidad de else if que necesito.
+//  no quedo contento con la cantida de else if que necesio.
 function quiz() {
-  alert("Voy a pensar un numero del 0 al 100.¿Crees que lo podrás acertarlo?")
   let numGanador = getRandomNumber(0, 100);
   let finJuego = true;
   
