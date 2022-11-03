@@ -57,7 +57,7 @@ console.log(usuario["nombre"]);
 
 let clave = "edad";
 
-console.log(usuario[clave], "sdfsdf");
+console.log(usuario[clave]);
 
 ///////////////////////////////
 // MODIFICAR uN VALOR

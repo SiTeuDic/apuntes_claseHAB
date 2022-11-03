@@ -65,6 +65,7 @@ console.log("Ejercicio 2");
 for (let i = 10; i <= 100; i += 10) {
   console.log(i);
 }
+
 console.log("");
 
 // Ejercicio: Crear las tablas de multiplicar con el buble for .(ANIDAR)
