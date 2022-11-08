@@ -17,7 +17,7 @@ for (const name in people) {
 }
 
 function esMayor(name, age) {
-  if (age > 18) {
+  if (age >= 18) {
     console.log(`${name} es mayor de edad`);
   } else {
     console.log(`${name} es menor de edad`);

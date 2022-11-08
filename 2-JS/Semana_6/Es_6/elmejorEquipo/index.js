@@ -30,3 +30,24 @@ function getRanking() {
   );
 }
 getRanking();
+
+/////////////////////////////////////////////////////
+
+// hacer un nuevo array con copias de cada objeto
+let withTotal = firstRound.map((equipo) => {
+  let total = equipo.scores.reduce((acc, current) => acc + current);
+  // Devuelve un nuevo array con todo lo que tenia y a mayores el total de puntos
+  return { ...equipo, total };
+});
+
+console.log(withTotal);
+
+// ordenamos el array
+withTotal.sort((equipoA, equipob) => equipoA.total - equipob.total); //como recibe objetos, utilizamos la propiedad adecuada(total)
+
+let mejor = withTotal[0];
+let peor = withTotal.length - 1;
+
+console.log(`El merjor equipo es ${mejor.team} con un total de ${mejor.total}`);
+
+console.log(`El peor equipo es ${peor.team} con un total de ${peor.total}`);

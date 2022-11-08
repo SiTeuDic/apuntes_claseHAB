@@ -16,7 +16,19 @@ const names = [
   "Kenton",
 ];
 
-let newArray = [];
+function eliminar(array) {
+  let newArray = [];
+  for (let el of array) {
+    if (!newArray.includes(el)) {
+      newArray.push(el);
+    }
+  }
+  return newArray;
+}
+
+console.log(eliminar(names));
+
+/* let newArray = [];
 
 names.forEach((name) => {
   if (!newArray.includes(name)) {
@@ -24,7 +36,7 @@ names.forEach((name) => {
   }
 });
 
-console.log(newArray);
+console.log(newArray); */
 
 // La funcion anterior es practicamente copiada de internet, se que no esta mal, aún asi os dejo mis intentos para los veais,el principal problema que encontraba es que en el nuevo array entraba el valor de indice con lo que solo me entraban numeros.
 

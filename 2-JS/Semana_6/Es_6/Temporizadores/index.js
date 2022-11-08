@@ -34,7 +34,7 @@ Cuando pare el temporizador debe mostrar un mensaje en la consola indicando que 
 
  */
 
-let mainInterval = setInterval(main, 5000);
+/* let mainInterval = setInterval(main, 5000);
 let counterS = 0;
 let counterM = 0;
 let counterH = 0;
@@ -66,3 +66,41 @@ function stopInterval(num, x) {
 }
 
 stopInterval(15, "S");
+ */
+
+let secCounter = 26000000000;
+
+function intervalFunc() {
+  secCounter++;
+
+  if (secCounter % 5 === 0) {
+    format(secCounter);
+  }
+}
+
+function format(sec) {
+  let segundos = sec % 60;
+  let minutosT = Math.floor(sec / 60);
+  let minutos = minutosT % 60;
+  let horasT = Math.floor(minutosT / 60);
+  let horas = horasT % 24;
+  let dias = Math.floor(horas / 24);
+
+  console.log(
+    `Han pasado ${dias} dias, ${horas} hora${plural(
+      horas
+    )}, ${minutos} minuto${plural(
+      minutos
+    )} y ${segundos} segundos desde la ejecucion del programa.`
+  );
+}
+
+setInterval(intervalFunc, 500);
+
+function plural(num) {
+  return num !== 1 ? "s" : "";
+}
+
+function parar(numero, letra) {
+  setTimeout(() => clearInterval(intervalFunc));
+}
