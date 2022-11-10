@@ -145,55 +145,69 @@ const cars = [
   },
 ];
 
-// 1. Obtén la suma total de todas las edades de las personas.
-const totalEdad = persons.reduce((acc, person) => acc + person.age, 0)
+console.log("1. Obtén la suma total de todas las edades de las personas.");
+const totalEdad = persons.reduce((acc, person) => acc + person.age, 0);
 
-  console.log(totalEdad);
+console.log(totalEdad);
 
-  // - 2. Obtén la suma total de todas las edades de las personas francesas.
+console.log(
+  "2. Obtén la suma total de todas las edades de las personas francesas."
+);
 
-  const edadFranceses = persons.filter((person) => person.country === "FR").reduce((acc, person) => acc + person.age, 0)
+const edadFranceses = persons
+  .filter((person) => person.country === "FR")
+  .reduce((acc, person) => acc + person.age, 0);
 
-  console.log(edadFranceses);
+console.log(edadFranceses);
 
-  // 3. Obtén un array con el nombre de todas las mascotas.
+console.log("3.Obtén un array con el nombre de todas las mascotas.");
+const mascotas = persons.map((person) => person.pet.name);
 
-  const mascotas = persons.map((person)=> person.pet.name)
+console.log(mascotas);
 
-  console.log(mascotas);
+console.log("4. Obtén un array con las personas que tengan gato.");
+const personasGato = persons.filter((person) => person.pet.type === "gato");
 
-  // 4. Obtén un array con las personas que tengan gato.
+console.log(personasGato);
 
-  const personasGato = persons.filter((person)=> person.pet.type === "gato").map((person)=> person.name)
+console.log("5.Obtén un array con los coches de los españoles.");
+const personasEspanolas = persons
+  .filter((person) => person.country === "ES")
+  .map((person) => person.car);
 
-  console.log(personasGato);
+const coches = cars.filter((car) => personasEspanolas.includes(car.id));
 
-  // 5.Obtén un array con los coches de los españoles.
+console.log(coches);
 
-  const personasEspañolas = persons.filter((person)=> person.country === "ES").map((person)=> person.car)
+console.log(
+  "6. Obtén un array con las personas que tengan un coche de la marca Ford."
+);
+const cochesFord = cars
+  .filter((car) => car.brand === "Ford")
+  .map((car) => car.id);
 
-const coches = cars.filter((car)=> personasEspañolas.includes(car.id) )
+const personasFord = persons.filter((person) =>
+  cochesFord.includes(person.car)
+);
 
-  console.log(coches);
+console.log(personasFord);
 
-
-  // 6. Obtén un array con las personas que tengan un coche de la marca Ford.
-
-  const cochesFord = cars.filter((car)=> car.brand === "Ford").map((car)=> car.id )
-
-  const personasFord = persons.filter((person)=> cochesFord.includes(person.car))
-console.log(cochesFord);
-  console.log(personasFord);
-
-
-  // 7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda la info de su coche
-
+console.log(
+  "7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda la info de su coche"
+);
+/* 
 
  let coches2 = cars.filter((car)=> car.id).map((car)=> car.id)
 
 const personasCoche = persons.includes((person)=> {
-  cars.push((car)=> )
-  })
+}
+
 
 console.log(coches2);
-console.log(personasCoche);
+console.log(personasCoche); */
+
+let personasCoches = persons.map((person) => {
+  return { ...person, car: cars.find((car) => car.id === person.car) };
+});
+
+console.log(personasCoches);
