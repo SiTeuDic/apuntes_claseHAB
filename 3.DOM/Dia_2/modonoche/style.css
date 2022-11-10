@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    --color-proncipal:rgb(189, 25, 25);
+    --color-secundario:rgb(158, 88, 224)
+    --letras: black
+}
+header {
+  height: 10rem;
+  background-color: var(--color-proncipal);
+  color: var(--letras);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: var(--color-secundario);
+}
