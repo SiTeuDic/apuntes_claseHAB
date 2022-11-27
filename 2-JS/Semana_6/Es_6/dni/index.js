@@ -92,7 +92,7 @@ function validateDNI(strDNI) {
   }
 }
 
-validateDNI("45960466-A");
+validateDNI("21697462-M");
 
 /* Tienes que crear una función en el archivo index.js de la derecha que reciba un DNI completo con este formato: 00000000-T (la letra puede ser mayúscula o minúscula) y debe hacer las siguientes comprobaciones:
 

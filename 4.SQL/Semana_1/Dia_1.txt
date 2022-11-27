@@ -1,0 +1,9 @@
+CRUD (CREAR, RETRIVE, UPDATE, DELETE)
+
+TIPOS DE DATOS
+Texto = text, varchar, mediumtext, tinytext, longtext, ...
+Números = 
+
+Una base de datos es una tabla muy grande donde hay que ser muy estricto con los datos que le pasamos a cada columna(hay que especificar el tipo de tato y eltamaño), con esta tabla se puede hacer un CRUD.
+
+MODELO ENTIDAD RELACCIÓN

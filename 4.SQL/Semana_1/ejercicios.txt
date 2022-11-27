@@ -1,0 +1,95 @@
+Escribe en el editor de la derecha el SQL necesario para crear una tabla llamada students dentro de la base de datos bootcamp que creamos y activcamos en las líneas 1 y 2.
+
+Esta tabla debe permitir guardar los siguiente campos:
+
+ID numérica, única y que se incremente automáticamente al introducir nuevas filas.
+Nombre del estudiante
+Apellidos del estudiante
+Email del estudiante
+Teléfono del estudiante
+DNI del estudiante
+País del Estudiante
+Código Postal del estudiante
+Dirección del estudiante
+Ciudad del Estudiante 
+Configura los campos según creas que es necesario para cada tipo de datos.
+
+////////////////////SOLUCION//////////////////////////
+CREATE TABLE students (
+student_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT, 
+Nombre varchar(30), 
+Apellidos varchar(50),
+Email varchar(30), 
+-- Despues de buscar por internet he decidido que, lamejor opción es la de varchar limitado a 9 caracteres
+-- Ya que no sera necesario realizar ninguna operacion con este numero
+Telefono varchar(9), 
+DNI varchar(11), 
+Codigo_postal varchar(5), 
+Direccion varchar(50), 
+Ciudad_estudiante varchar(30)
+
+)
+///////////////////////////////////////////////////////
+En el ejercicio anterior la tabla students tenía varios campos referidos a la dirección del estudiante: Dirección, Ciudad, Código Postal y País. Pero cuando empezamos a usar esa tabla nos dimos cuenta de un problema; hay varios alumnos que tienen varias direcciones por lo que es necesario hacer las modificaciones necesarias en la base de datos para solucionar esto:
+
+Crea una nueva tabla addresses con los campos de dirección necesarios.
+
+Modifica mediante la sentencia SQL ALTER TABLE la tabla students que creaste en el ejercicio anterior para eliminar los campos de dirección y crea los campos necesarios para que las dos tablas estén relacionadas mediante una FOREIGN KEY.
+/////////////////////SOLUCION///////////////////////////////////
+ALTER TABLE students
+DROP COLUMN 
+Codigo_postal, Direccion, Ciudad_estudiante;
+
+CREATE TABLE addresses (
+ id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+ Direccion varchar(50), 
+ Ciudad varchar(30), 
+ Codigo_postal varchar(5), 
+ Pais varchar(30),
+ id_student int UNSIGNED, 
+ FOREIGN KEY (id_student) REFERENCES students(student_id)
+
+)
+//////////////////////////////////////////////////////////////
+
+Partiendo de la estructura de tablas resultante de la realización de los ejercicios anteriores crea los INSERT necesarios para introducir estos datos en las tablas de la base de datos bootcamp.
+
+id,first_name,last_name,email,tlf,DNI,country,cp,address,city
+------------------------------------------------------
+1,Irvin,Lethem,ilethem0@google.com.au,993870144,279948941-9,Indonesia,83297,98339 Loftsgordon Road,Babakanbandung
+2,Kylie,Mungan,kmungan1@howstuffworks.com,497494899,748551874-7,Philippines,44455,74641 Dwight Avenue,Bilar
+3,Yul,Dibbert,ydibbert2@businesswire.com,776631050,215649413-4,Indonesia,62965,9510 Milwaukee Street,Sumberejo
+4,Tamra,Mc Gorley,tmcgorley3@studiopress.com,921948685,617064473-7,Norway,54756,8902 Doe Crossing Alley,Steinkjer
+5,Elmira,Imbrey,eimbrey4@cpanel.net,304168000,178988896-4,United States,51471,8616 Stephen Hill,Charleston
+/////////////////////////SOLUCION///////////////////////////
+INSERT INTO students 
+(Nombre, Apellidos, Email, Telefono, DNI)
+values 
+('Irvin','Lethem', 'ilethem0@google.com.au', '993870144', '279948941-9'),
+('Kylie', 'Mungan', 'kmungan1@howstuffworks.com', '497494899', '748551874-7'),
+('Yul', 'Dibbert', 'ydibbert2@businesswire.com', '776631050', '215649413-4'),
+('Tamra', 'Mc Gorley', 'tmcgorley3@studiopress.com', '921948685', '617064473-7'),
+('Elmira', 'Imbrey', 'eimbrey4@cpanel.net', '304168000', '178988896-4');
+INSERT INTO 
+addresses (Pais, Codigo_postal, Direccion, Ciudad)
+values ('Indonesia', '83297', '98339 Loftsgordon Road', 'Babakanbandung' ),
+('Philippines', '44455', '74641 Dwight Avenue', 'Bilar'),
+('Indonesia','62965','9510 Milwaukee Street','Sumberejo'),
+('Norway', '54756', '8902 Doe Crossing Alley', 'Steinkjer'),
+('United States', '51471', '8616 Stephen Hill', 'Charleston')
+;
+
+
+
+
+select distinct student_id from students
+
+////////////////////////////////////////////////////////////////
+Selecciona el nombre, apellido y número de teléfono de todos los estudiantes, ordenados alfabéticamente según su apellido.
+
+Después haz otra consulta que indique cuántos usuarios hay de cada país, basándote en la tabla de direcciones.
+/////////////////////////SOLUCION///////////////////////////
+
+-- select Nombre, Apellidos, Telefono from students order by Apellidos 
+
+select Pais, count(*) totalDeCadaPais from addresses group by pais
