@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nabla&family=Outfit:wght@300;400;600&family=Roboto+Slab:wght@500&family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --colorfondo: #f55353;
+  --colorSecundario: #143f6b;
+  --font: nabla;
+  --font2: Roboto Slab;
+  --table: #e73939d2;
+  --color-letra: #0c243b;
+}
+body {
+  background-color: var(--colorfondo);
+}
+p {
+  font-size: 25px;
+  color: var(--color-letra);
+  text-align: center;
+  padding: 10px;
+}
+h1 {
+  font-family: var(--font);
+  letter-spacing: 0px;
+}
+h2 {
+  font-family: var(--font2);
+  letter-spacing: 1px;
+}
+header {
+  background-color: var(--colorSecundario);
+  color: white;
+  text-align: center;
+}
+
+div {
+  width: 95%;
+  margin: auto;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.623);
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+
+button {
+  text-align: center;
+  background-color: aliceblue;
+  margin: 2px;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid black;
+
+  font-size: 25px;
+  color: var(--color-letra);
+}
+button:hover {
+  background-color: rgb(162, 167, 172);
+}
+button:active {
+  background-color: rgb(162, 167, 172);
+}

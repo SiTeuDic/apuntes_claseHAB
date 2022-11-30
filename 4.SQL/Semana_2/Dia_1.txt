@@ -1,0 +1,68 @@
+SELACCIONAR DATOS DE VARIAS TABLAS
+
+
+REPASO
+-> Entidad = tablas
+-> Caracteristicas = Columnas
+-> Relacciones = 1:N | N:1 (el ide va en la parte de la N) 
+	-> N:M Es la ralacción puente en la que se naceseta una tabla entre las dos entidades que 
+	agrupe en las caracteriasticas los IDs de ambas tablas
+
+
+|/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\|
+
+INNER JOIN
+
+select 
+	bandas.name, musicians.name -> Indicamos primero la tabla y despies la columna  
+from -> Unir tablas
+	bandas inner join musicians  -> Desde la tabla de bandas entra en la de músicos. 
+on -> Donde unirlar
+	bandas.id=musicians.banda_id; -> relacciona donde bandas.id sea igual a banda_id
+	
+LEFT JOIN (RIGT)
+-> Muestra la de la izquierda y la rellena con la de la derecha
+select 
+bandas.name, musicians.name 
+from 
+bandas left join musicians 
+on 
+bandas.id=musicians.banda_id;
+|/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\/|\|
+TABLAS M:M
+Llamando a 4 tablas
+
+select 
+	musicians.name, disks.name, bandas.name
+from 
+musicians 
+inner join colaborations on musicians.id = colaborations.musician_id   
+inner join disks on colaborations.disk_id=disks.id
+inner join bandas on bandas.id=disks.banda_id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
