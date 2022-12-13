@@ -1,0 +1,2 @@
+1 23 PENDING hacer la compra
+2 24 DONE Lavar las dientes
