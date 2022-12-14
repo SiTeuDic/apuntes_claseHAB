@@ -1,0 +1,8 @@
+1 PENDING hacer
+2 DONE hacer
+3 PENDING hacer
+4 PENDING hacer
+5 DONE hacer
+6 PENDING hacer la compra
+7 PENDING hacer la compra
+8 DONE pataca
