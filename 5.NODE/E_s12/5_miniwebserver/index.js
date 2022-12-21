@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
 
+//TODO: try cath en todas las funciones
 const get_time = (req, res) => {
   const time = new Date();
   const hourMin = time.getHours() + ":" + time.getMinutes();
@@ -48,6 +48,12 @@ app.get("/directory", get_directory);
 app.get("/error-forzado", (req, res, next) => {
   return next(new Error("Este es un error generado intencionadamente"));
 });
+
+app.use((error, req, res, next)=>{
+  console.log(error.message);
+  res.status(500).send("Algo salió mal")
+})
+
 app.use(function( req, res, next) {
   res.status(404).send('Page not found');
 });
