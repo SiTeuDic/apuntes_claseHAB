@@ -44,7 +44,7 @@ const get_races = async (req, res) => {
     // TODO: query para crear una carrera (insert into...)
     await connection.query(`INSERT INTO Races
     (name, type,category, year) 
-    VALUES ("carrra popular", "sub-16", "trail montaña", "2020/05/12" )`);
+    VALUES ("carrra popular", "sub-16", "trail montaña", "2020-05-12" )`);
   
     res.send("");
   };
