@@ -1,25 +1,39 @@
-const { text } = require("body-parser");
 const { compileFunction } = require("vm");
 const fs = require("fs").promises;
-
+const joi = require("@hapi/joi");
+//Me hubiera gustado poder formatear la forma de formatear la fecha de una forma más intuitiva,
+// el formato MM/DD/YYYY no me parece nada intuitivo, lo único que se me ha ocurrido es parar en
+// el error el formato esperado por joi,un saludo.
 const addEvent = async (req, res) => {
-  const event = req.body.event;
-  const date = req.body.date;
-  const eventObj = { date, text: event };
-  const data = JSON.parse(await fs.readFile("data.json", { encoding: "utf8" }));
-
   try {
-    if (event === undefined || date === undefined) {
-      res.status(400).send();
+    const event = req.body.event;
+    const date = req.body.date;
+    const eventObj = { date, text: event };
+    const data = JSON.parse(
+      await fs.readFile("data.json", { encoding: "utf8" })
+    );
+
+    const schema = joi.object().keys({
+      event: joi.string().required(),
+      date: joi.date().required(),
+    });
+    const validation = schema.validate(req.body);
+
+    if (validation.error) {
+      throw new Error(validation.error.message);
+      // res.status(400).send(validation.error.message);
       return;
     }
+
     data.push(eventObj);
-    res.status(201).send("Evento creado con exito.");
-    dataStr = JSON.stringify(data);
     await fs.writeFile("data.json", JSON.stringify(data));
+
+    res.status(201).send("Evento creado con exito.");
   } catch (error) {
-    console.log(error);
-    res.status(500).send();
+    console.log(error.message);
+    res
+      .status(500)
+      .send(`${error.message}, event must be string, date format MM/DD/YYY`);
   }
 };
 
@@ -33,8 +47,7 @@ const getEvents = async (req, res) => {
 
     res.send(data);
   } catch (error) {
-    console.log(error);
-    res.status(500).send();
+    res.status(500).send(error.message);
   }
 };
 
