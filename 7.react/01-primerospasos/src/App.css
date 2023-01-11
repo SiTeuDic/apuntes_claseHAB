@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+div.characters.Dead .status {
+  color: red;
+}
+div.characters.Alive .status {
+  color: rgb(47, 255, 0);
+}
+
+body {
+  background-color: rgba(41, 182, 31, 0.7);
+}
+
+.App {
+  text-align: center;
+}
+
+div.characters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+article {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+li.main {
+  border-radius: 1rem;
+  list-style: none;
+  margin: 0.5rem;
+  text-align: center;
+}
+li {
+  list-style: none;
+  margin: 1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.name,
+.specie,
+.status {
+  padding: 5px;
+  border-radius: 0.5rem;
+  margin-top: 15px;
+  background-color: rgba(0, 0, 0, 0.821);
+  color: aliceblue;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  max-width: 10rem;
+  border: 3px solid black;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

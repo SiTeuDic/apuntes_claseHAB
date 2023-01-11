@@ -2,16 +2,24 @@ const { compileFunction } = require("vm");
 const fs = require("fs").promises;
 const joi = require("@hapi/joi");
 //Me hubiera gustado poder formatear la forma de formatear la fecha de una forma más intuitiva,
-// el formato MM/DD/YYYY no me parece nada intuitivo, lo único que se me ha ocurrido es parar en
+// el formato MM/DD/YYYY no me parece nada intuitivo, lo único que se me ha ocurrido es pasar en
 // el error el formato esperado por joi,un saludo.
+const getdata = async () => {
+  try {
+    const data = JSON.parse(
+      await fs.readFile("data.json", { encoding: "utf8" })
+    );
+    return data;
+  } catch (error) {
+    return [];
+  }
+};
 const addEvent = async (req, res) => {
   try {
     const event = req.body.event;
     const date = req.body.date;
     const eventObj = { date, text: event };
-    const data = JSON.parse(
-      await fs.readFile("data.json", { encoding: "utf8" })
-    );
+    const data = await getdata();
 
     const schema = joi.object().keys({
       event: joi.string().required(),
